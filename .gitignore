@@ -1,1 +1,13 @@
 .DS_Store
+# Configurações do VS Code
+.vscode/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Dependências (caso use npm no futuro)
+node_modules/
+
+# Arquivos de ambiente
+.env
