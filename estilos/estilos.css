@@ -1,3 +1,18 @@
+:root{
+    /* Cores */
+    --cor-primaria: darkblue;
+    --cor-texto-claro: white;
+    --cor-fundo-suave: #eee;
+    --cor-texto-escuro: #333;
+
+     /* Imagens */
+    --largura-imagem: 150px;
+    --altura-imagem: auto;
+
+    /* Bordas */
+    --borda-padrao: 1px solid black;
+}
+
 main{
     max-width: 840px;
 }
@@ -6,54 +21,55 @@ aside{
     width: 20rem;
     margin: 1rem;
     border: 1px solid rgb(0 0 0 / 0.2);
-    padding: 1 rem;
-    background-color: #eee;
-    color: #333;
+    padding: 1rem;
+    background-color: var(--cor-fundo-suave);
+    color: var(--cor-texto-escuro);
     text-align: center;
 }
 
 aside img{
     width: 200px;
-    height: auto;
+    /*height: var(--altura-imagem); Por cascata não precisa declarar*/
 }
 
 main img{
-    width: 150px;
-    height: auto;
-    border: 1px solid black;
+    width: var(--largura-imagem);
+    /*height: var(--altura-imagem); Por cascata não precisa declarar*/
+    border: var(--borda-padrao);
     padding: 5px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0,3);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 nav{
-    background-color: darkblue;
+    background-color: var(--cor-primaria);
     padding: 10px;
 }
 nav a{
-    color: white;
+    color: var(--cor-texto-claro);
     display: block;
     padding: 20px;
 }
 h1{
-    color: darkblue;
+    color: var(--cor-primaria);
 }
 img{
-    width: 150px;
-    height: auto;
-    border: 1px solid black;
+    width: var(--largura-imagem);
+    /*height: var(--altura-imagem); Por cascata não precisa declarar*/
+
+    border: var(--borda-padrao);
     box-shadow: 0 0 30px gray;
 }
 p{
-    padding: 0px;
+    /* padding: 0px; já é o padrão*/
 }
 footer{
     margin-top: 15px;
-    border-top: 1px solid #000;
+    border-top: var(--borda-padrao);
     text-align: center;
 }
 footer p{
     margin-top:100px; 
     padding:40px; 
     background-color: bisque; 
-    text-align: center;
+    /*text-align: center; Já herda do footer*/
 }
