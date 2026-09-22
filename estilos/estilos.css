@@ -1,100 +1,138 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-:root{
+:root {
     /* Cores */
     --cor-primaria: darkblue;
     --cor-texto-claro: white;
     --cor-fundo-suave: #eee;
     --cor-texto-escuro: #333;
 
-     /* Imagens */
+    /* Imagens */
     --largura-imagem: 150px;
-    --altura-imagem: auto;
 
     /* Bordas */
     --borda-padrao: 1px solid black;
 }
 
-main{
-    max-width: 840px;
-}
-
-aside{
-    width: 20rem;
-    text-align: center;
-    position: relative;
-}
-
-aside h2{
-    position: absolute;
-    top: 130px;
-    left: 195px;
-    color: white;
-}
-
-aside img{
-    width: 200px;
-    /*height: var(--altura-imagem); Por cascata não precisa declarar*/
-}
-
-main img{
+/* Regra base para todas as imagens */
+img {
     width: var(--largura-imagem);
-    /*height: var(--altura-imagem); Por cascata não precisa declarar*/
     border: var(--borda-padrao);
+}
+
+header, footer, .grid {
+    max-width: 840px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav {
+    background-color: var(--cor-primaria);
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav a {
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--cor-texto-claro);
+}
+
+h1 {
+    color: var(--cor-primaria);
+    border-bottom: 2px solid black;
+    margin: 20px;
+}
+
+p {
+    text-align: justify;
+    margin: 1rem;
+}
+
+main h2{
+    margin: 1rem;
+}
+
+.grid {
+    display: grid;
+    align-items: start;
+    grid-template-columns: 20rem 1fr;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+main {
+    grid-column: 2/3;
+    margin: 1rem;
+}
+
+main img {
     padding: 5px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
     float: right;
     margin: 15px;
 }
 
-nav{
-    background-color: var(--cor-primaria);
-    padding: 10px;
+aside {
+    width: auto;
+    height: auto;
+    text-align: center;
+    position: relative;
+    grid-column: 1/2;
+    grid-row: 1/2;
 }
-nav a{
-    color: var(--cor-texto-claro);
-    display: block;
-    padding: 20px;
-}
-h1{
-    color: var(--cor-primaria);
-}
-img{
-    width: var(--largura-imagem);
-    /*height: var(--altura-imagem); Por cascata não precisa declarar*/
 
-    border: var(--borda-padrao);
+aside h2 {
+    position: absolute;
+    top: 130px;
+    left: 170px;
+    color: white;
+}
+
+aside img {
+    width: 200px;
     box-shadow: 0 0 30px gray;
-    
 }
-p{
-    /* padding: 0px; já é o padrão*/
-    text-align: justify;
-}
-footer{
+
+footer {
     margin-top: 15px;
     border-top: var(--borda-padrao);
     text-align: center;
 }
-footer p{
-    margin-top:100px; 
-    padding:40px; 
+
+footer p {
+    margin-top: 100px; 
+    padding: 40px; 
     background-color: bisque; 
-    /*text-align: center; Já herda do footer*/
+    text-align: center; /* Necessário para sobrescrever o text-align: justify do 'p' */
 }
 
 /* Seletores de Classe */
-
-.caixa{
-
+.caixa {
     margin: 1rem;
     padding: 1rem;
     border: 1px solid black;
     background-color: var(--cor-fundo-suave);
     color: var(--cor-texto-escuro);
+}
 
+.caixa li a{
+    margin: 1rem;
+    padding: auto;
+    text-decoration: none;
+}
+
+.caixa li{
+    margin-left: 1rem;
+    text-decoration: none;
 }
