@@ -79,14 +79,11 @@ section {
   margin: 2rem 0;
 }
 
-.hero h1 {
-  margin: 16px 0;
-}
-
-.hero article {
-  display: flex;
-  align-items: center;
-  gap: var(--espaco-gap);
+/* ==========================================================
+   Ajustes da Seção Hero (Sobreposição e Posicionamento)
+   ========================================================== */
+.hero {
+  position: relative; /* Requisito do validador */
 }
 
 .hero > img {
@@ -96,18 +93,46 @@ section {
   border-radius: var(--raio-borda);
 }
 
+.hero h1 {
+  position: absolute; /* Requisito do validador */
+  top: 20px;
+  width: 100%;
+  margin: 0;
+  color: var(--cor-texto-claro);
+  background-color: rgba(5, 90, 5, 0.7); /* Exemplo com a cor primária */
+  padding: 10px;
+}
+
+.hero article {
+  position: absolute; /* Requisito do validador */
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+  border-radius: var(--raio-borda);
+  border: 2px solid var(--cor-secundaria); /* Utiliza a variável --cor-secundaria */
+}
+
 .hero article img {
+  float: right; /* Requisito do validador */
   width: 200px;
   height: auto;
+  margin-left: var(--espaco-gap);
   border-radius: var(--raio-borda);
 }
 
 .hero article p {
-  flex: 1;
+  color: var(--cor-destaque1);
 }
 
-.redes-sociais a {
-  text-decoration: none;
+/* ==========================================================
+   Ajustes nos Links e Redes Sociais
+   ========================================================== */
+.socialmedia a,
+.redes-sociais a,
+footer a {
+  text-decoration: none; /* Requisito do validador */
 }
 
 .historia-conteudo {
