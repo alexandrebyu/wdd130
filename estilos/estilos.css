@@ -95,7 +95,6 @@ aside {
     padding: 1rem;
     background-color: #eee;
     color: #333;
-    height: auto;
     text-align: center;
     position: relative;
     grid-column: 1/2;
