@@ -54,6 +54,7 @@ h1 {
 }
 
 p {
+    padding: 0;
     text-align: justify;
     margin: 1rem;
 }
@@ -72,11 +73,14 @@ main h2{
 }
 
 main {
+    max-width: 840px;
     grid-column: 2/3;
     margin: 1rem;
 }
 
 main img {
+    width: 150px;
+    height: auto;
     padding: 5px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
     float: right;
@@ -84,7 +88,12 @@ main img {
 }
 
 aside {
-    width: auto;
+    width: 20rem;
+    margin: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    background-color: #eee;
+    color: #333;
     height: auto;
     text-align: center;
     position: relative;
@@ -101,6 +110,7 @@ aside h2 {
 
 aside img {
     width: 200px;
+    height: auto;
     box-shadow: 0 0 30px gray;
 }
 
@@ -114,7 +124,7 @@ footer p {
     margin-top: 100px; 
     padding: 40px; 
     background-color: bisque; 
-    text-align: center; /* Necessário para sobrescrever o text-align: justify do 'p' */
+    text-align: center;
 }
 
 /* Seletores de Classe */
