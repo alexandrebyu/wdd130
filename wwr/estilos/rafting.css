@@ -129,10 +129,12 @@ section {
 /* ==========================================================
    Ajustes nos Links e Redes Sociais
    ========================================================== */
-.socialmedia a,
-.redes-sociais a,
-footer a {
+.socialmedia a{
   text-decoration: none; /* Requisito do validador */
+}
+
+.socialmedia a img{
+  width: 50px;
 }
 
 .historia-conteudo {
