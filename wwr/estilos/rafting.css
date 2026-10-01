@@ -129,7 +129,8 @@ section {
 /* ==========================================================
    Ajustes nos Links e Redes Sociais
    ========================================================== */
-.socialmedia a{
+.socialmedia a
+.redes-sociais a{
   text-decoration: none; /* Requisito do validador */
 }
 
