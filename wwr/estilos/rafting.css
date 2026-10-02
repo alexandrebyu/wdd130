@@ -144,10 +144,6 @@ section {
   /* Requisito do validador */
 }
 
-.redes-sociais a img {
-  width: 50px;
-}
-
 .historia-conteudo {
   display: flex;
   align-items: center;
