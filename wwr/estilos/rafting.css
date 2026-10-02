@@ -139,12 +139,12 @@ section {
 /* ==========================================================
    Ajustes nos Links e Redes Sociais
    ========================================================== */
-.socialmedia a .redes-sociais a {
+.redes-sociais a {
   text-decoration: none;
   /* Requisito do validador */
 }
 
-.socialmedia a img {
+.redes-sociais a img {
   width: 50px;
 }
 
@@ -221,13 +221,11 @@ footer {
   padding: 20px;
 }
 
-/* Imagem preenchendo a coluna na mesma altura do formulário */
-.contato-secao img {
+.contato-secao iframe {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  /* preenche o espaço sem distorcer */
-  border-radius: 8px;
+  height: 300px;
+  border: none;
+  border-radius: var(--raio-borda);
 }
 
 /* Quadro do formulário */
@@ -270,25 +268,26 @@ footer {
 
 /* Botão ocupando a largura toda da coluna */
 .contato-secao button {
-  background-color: #7b5ea7;
-  color: white;
+  background-color: var(--cor-primaria);
+  color: var(--cor-texto-claro);
   border: none;
   padding: 12px;
   font-size: 1rem;
-  font-weight: bold;
-  border-radius: 4px;
+  font-weight: var(--peso-destaque);
+  border-radius: var(--raio-borda);
   cursor: pointer;
   margin-top: 20px;
 }
 
 .contato-secao button:hover {
-  background-color: #5f4785;
+  filter: brightness(0.85);
+  /* escurece levemente no hover */
 }
 
 .galeria-contato {
   display: flex;
   justify-content: space-around;
-  gap: 150px;
+  gap: 50px;
   margin-top: 20px;
 }
 
@@ -299,4 +298,21 @@ footer {
 .galeria-contato img {
   width: 100%;
   border-radius: 8px;
+}
+
+/* Informações da empresa da página de contato */
+.cabecalho-contato {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.cabecalho-contato h1 {
+  margin-bottom: 1rem;
+}
+
+.cabecalho-contato .h2inicio {
+  font-family: var(--fonte-corpo);
+  font-size: 1.1rem;
+  font-weight: normal;
+  line-height: 1.6;
 }
