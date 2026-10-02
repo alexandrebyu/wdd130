@@ -1,8 +1,12 @@
 :root {
-  --cor-primaria: #055a05;          /* Verde-floresta */
-  --cor-secundaria: #f4a261;        /* bege-médio */
-  --cor-destaque1: #264653;         /* azul-escuro acinzentada */
-  --cor-destaque2: #e9c46a;         /* amarelo-claro dourado */
+  --cor-primaria: #055a05;
+  /* Verde-floresta */
+  --cor-secundaria: #f4a261;
+  /* bege-médio */
+  --cor-destaque1: #264653;
+  /* azul-escuro acinzentada */
+  --cor-destaque2: #e9c46a;
+  /* amarelo-claro dourado */
   --cor-texto-claro: #ffffff;
   --fonte-titulo: "Times New Roman", Georgia, serif;
   --fonte-corpo: Arial, Helvetica, sans-serif;
@@ -83,10 +87,11 @@ section {
    Ajustes da Seção Hero (Sobreposição e Posicionamento)
    ========================================================== */
 .hero {
-  position: relative; /* Requisito do validador */
+  position: relative;
+  /* Requisito do validador */
 }
 
-.hero > img {
+.hero>img {
   display: block;
   width: 100%;
   height: auto;
@@ -94,28 +99,33 @@ section {
 }
 
 .hero h1 {
-  position: absolute; /* Requisito do validador */
+  position: absolute;
+  /* Requisito do validador */
   top: 20px;
   width: 100%;
   margin: 0;
   color: var(--cor-texto-claro);
-  background-color: rgba(5, 90, 5, 0.7); /* Exemplo com a cor primária */
+  background-color: rgba(5, 90, 5, 0.7);
+  /* Exemplo com a cor primária */
   padding: 10px;
 }
 
 .hero article {
-  position: absolute; /* Requisito do validador */
+  position: absolute;
+  /* Requisito do validador */
   bottom: 20px;
   left: 20px;
   right: 20px;
   background-color: rgba(255, 255, 255, 0.9);
   padding: 15px;
   border-radius: var(--raio-borda);
-  border: 2px solid var(--cor-secundaria); /* Utiliza a variável --cor-secundaria */
+  border: 2px solid var(--cor-secundaria);
+  /* Utiliza a variável --cor-secundaria */
 }
 
 .hero article img {
-  float: right; /* Requisito do validador */
+  float: right;
+  /* Requisito do validador */
   width: 200px;
   height: auto;
   margin-left: var(--espaco-gap);
@@ -129,12 +139,12 @@ section {
 /* ==========================================================
    Ajustes nos Links e Redes Sociais
    ========================================================== */
-.socialmedia a
-.redes-sociais a{
-  text-decoration: none; /* Requisito do validador */
+.socialmedia a .redes-sociais a {
+  text-decoration: none;
+  /* Requisito do validador */
 }
 
-.socialmedia a img{
+.socialmedia a img {
   width: 50px;
 }
 
@@ -190,4 +200,103 @@ footer {
 .redes-sociais a img {
   width: 50px;
   height: auto;
+}
+
+/* ==================================================
+   PÁGINA DE CONTATO (escopado em .contato-secao)
+   ================================================== */
+
+/* Corpo principal: mapa à esquerda, formulário à direita */
+.contato-secao {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* duas colunas iguais */
+  gap: 40px;
+  /* espaço entre as colunas */
+  align-items: stretch;
+  /* faz as colunas terem a mesma altura */
+  max-width: 1000px;
+  margin: 0 auto;
+  /* centraliza o bloco na página */
+  padding: 20px;
+}
+
+/* Imagem preenchendo a coluna na mesma altura do formulário */
+.contato-secao img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* preenche o espaço sem distorcer */
+  border-radius: 8px;
+}
+
+/* Quadro do formulário */
+.contato-secao fieldset {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.contato-secao legend {
+  padding: 0 10px;
+  font-weight: bold;
+}
+
+/* Formulário em coluna: label em cima, campo embaixo */
+.contato-secao form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Campos de escrita na mesma largura */
+.contato-secao input[type="text"],
+.contato-secao input[type="email"],
+.contato-secao textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #999;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+/* Cada opção (radio/checkbox + texto) vira uma linha única */
+.contato-opcao {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+/* Botão ocupando a largura toda da coluna */
+.contato-secao button {
+  background-color: #7b5ea7;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.contato-secao button:hover {
+  background-color: #5f4785;
+}
+
+.galeria-contato {
+  display: flex;
+  justify-content: space-around;
+  gap: 150px;
+  margin-top: 20px;
+}
+
+.galeria-contato figure {
+  width: 220px;
+}
+
+.galeria-contato img {
+  width: 100%;
+  border-radius: 8px;
 }

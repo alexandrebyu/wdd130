@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entre em contato conosco e descubra mais sobre nossos passeios de rafting.">
+    <meta name="author" content="Alexandre Cleiton Lima Peregrino">
+    <title>Página de Contato</title>
+    <link rel="stylesheet" href="estilos/rafting.css">
+</head>
+
+<body>
+    <header>
+        <img src="imagens/logowwr.jpg" alt="Logo wwr rafting">
+        <nav>
+            <ul class="navegacao">
+                <li><a href="index.html">Página Inicial</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="passeios.html">Passeios</a></li>
+                <li><a href="contato.html">Fale Conosco</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="cabecalho-contato">
+            <h1>Companhia de Rafting em Corredeiras</h1>
+            <h2 class="h2inicio">123 Rua Principal do Rio <br>Foz do Iguaçu, Paraná<br>+55 (45)
+                99999-9999<br>info@correiras.com</h2>
+        </div>
+
+        <section class="contato-secao">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3596.603503340622!2d-54.44064682474945!3d-25.6512817774214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94f6ea9eee5378d3%3A0x5a4c438b42c5a278!2sMacuco%20Safari!5e0!3m2!1spt-BR!2sbr!4v1790977946157!5m2!1spt-BR!2sbr"
+                title="Mapa do local da empresa" allowfullscreen loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"></iframe>
+
+            <fieldset>
+                <legend>Envie uma mensagem</legend>
+                <form action="processar-contato.php" method="post">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label>Propósito da Mensagem:</label>
+                    <div class="contato-opcao">
+                        <input type="radio" id="consulta" name="assunto" value="consulta" required>
+                        <label for="consulta">Consulta Geral</label>
+                    </div>
+                    <div class="contato-opcao">
+                        <input type="radio" id="reserva" name="assunto" value="reserva">
+                        <label for="reserva">Pergunta sobre Reserva</label>
+                    </div>
+                    <div class="contato-opcao">
+                        <input type="radio" id="site" name="assunto" value="site">
+                        <label for="site">Sugestão de Site</label>
+                    </div>
+
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+                    <div class="contato-opcao">
+                        <input type="checkbox" id="newsletter" name="newsletter" value="sim">
+                        <label for="newsletter">Quero receber a newsletter mensal</label>
+                    </div>
+
+                    <button type="submit">Entrar em Contato!</button>
+                </form>
+            </fieldset>
+        </section>
+
+        <section class="aventura">
+            <h2>Estamos Aqui para Serví-lo</h2>
+            <div class="galeria-contato">
+                <figure>
+                    <img src="imagens/rafting-rio-negro.jpg" alt="Bote descendo o Salto do Rio Negro">
+                    <figcaption>João Silva — Guia de Rafting</figcaption>
+                </figure>
+                <figure>
+                    <img src="imagens/rafting-paranapanema.jpg" alt="Bote na Corredeira do Rio Paranapanema">
+                    <figcaption>Maria Souza — Instrutora de Segurança</figcaption>
+                </figure>
+                <figure>
+                    <img src="imagens/rafting-jacare.jpg" alt="Bote na Corredeira do Rio Jacaré">
+                    <figcaption>Carlos Lima — Coordenador de Reservas</figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 ✔Alexandre Peregrino 🌎 Natal-RN, Brasil</p>
+        <nav class="socialmedia">
+            <a href="https://facebook.com">
+                <img src="imagens/icon-facebook.png" alt="Ícone do Facebook">
+            </a>
+            <a href="https://linkedin.com">
+                <img src="imagens/icon-linkedin.jpg" alt="Ícone do linkedin">
+            </a>
+            <a href="https://instagram.com">
+                <img src="imagens/icon-instagram.jpg" alt="Ícone do instagram">
+            </a>
+        </nav>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,183 @@
+/* ===== Reset básico ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+}
+
+/* ===== Cabeçalho roxo: logo à esquerda, menu à direita ===== */
+header {
+    background-color: #7b5ea7; /* roxo do wireframe */
+    display: flex;
+    justify-content: space-around; /* empurra um item pra cada lado */
+    align-items: center;            /* alinha verticalmente no centro */
+    padding: 10px 30px;
+}
+
+header img {
+    height: 70px;
+}
+
+.navegacao {
+    display: flex;
+    gap: 25px;          /* espaço entre os links */
+    list-style: none;   /* remove as bolinhas da lista */
+}
+
+.navegacao a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navegacao a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Informações da empresa centralizadas ===== */
+.hero {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.hero h1 {
+    margin-bottom: 15px;
+}
+
+/* ===== Corpo principal: mapa à esquerda, formulário à direita ===== */
+.contato {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* duas colunas iguais */
+    gap: 40px;                      /* espaço entre as colunas */
+    align-items: stretch;                 /* faz as colunas terem a mesma altura */
+    max-width: 1000px;
+    margin: 0 auto;                 /* centraliza o bloco na página */
+    padding: 20px;
+}
+
+.contato img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* faz a imagem preencher o espaço sem distorcer */
+    border-radius: 8px;
+}
+
+/* Formulário em coluna: label em cima, campo embaixo */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Controla o estilo padrão do fieldset */
+fieldset {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+legend {
+    padding: 0 10px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 8px;
+    border: 1px solid #999;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/* Radios em linha vertical, cada um com seu texto */
+input[type="radio"] {
+    margin-right: 6px;
+}
+
+/* Botão ocupando a largura toda da coluna */
+button {
+    background-color: #7b5ea7;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #5f4785;
+}
+
+/* ===== Seção "Estamos Aqui para Serví-lo" ===== */
+.aventura {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap;              /* quebra de linha se faltar espaço */
+    justify-content: space-around;
+    gap: 150px;
+    margin-top: 20px;
+}
+
+.galeria figure {
+    width: 220px;
+}
+
+.galeria img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* ===== Rodapé roxo: texto à esquerda, ícones à direita ===== */
+footer {
+    background-color: #7b5ea7;
+    color: white;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+    text-align: center;
+    padding: 15px 30px;
+}
+
+.socialmedia {
+    display: flex;
+    gap: 15px;
+}
+
+.socialmedia img {
+    height: 32px;
+}
+
+/* 1) Todos os campos de escrita na mesma largura */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* 2) Cada opção (radio/checkbox + texto) vira uma linha única */
+.opcao {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
