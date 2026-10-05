@@ -188,6 +188,11 @@ footer {
   padding: 16px;
 }
 
+.redes-sociais a,
+footer a {
+    text-decoration: none;
+}
+
 .redes-sociais {
   display: flex;
   gap: var(--espaco-gap);
