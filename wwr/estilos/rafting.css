@@ -190,7 +190,7 @@ footer {
 
 .redes-sociais a,
 footer a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .redes-sociais {
@@ -316,4 +316,295 @@ footer a {
   font-size: 1.1rem;
   font-weight: normal;
   line-height: 1.6;
+}
+
+.newsletter {
+  margin: 2rem auto;
+  padding: 20px;
+  max-width: 600px;
+}
+
+.newsletter fieldset {
+  padding: 20px;
+  border: solid 2px var(--cor-destaque1);
+  border-radius: var(--raio-borda);
+}
+
+.newsletter legend {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 0 10px;
+}
+
+.newsletter form {
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+
+}
+
+.newsletter input[type="text"],
+.newsletter input[type="email"] {
+
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #999;
+  border-radius: 4px;
+  font-size: 1rem;
+
+}
+
+.newsletter button {
+  background-color: var(--cor-primaria);
+  color: var(--cor-texto-claro);
+  border: none;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: var(--peso-destaque);
+  border-radius: var(--raio-borda);
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.newsletter button:hover {
+  filter: brightness(0.85);
+}
+
+/* ==========================================================
+   OFERTAS — blocos da seção de 2 colunas
+   ========================================================== */
+
+.ofertas-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--espaco-gap);
+}
+
+.ofertas {
+  background-color: #eef6ee;
+  /* verde bem claro, destaca do fundo branco */
+  border: 1px solid var(--cor-destaque1);
+  border-radius: var(--raio-borda);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.ofertas h3 {
+  font-family: var(--fonte-titulo);
+  color: var(--cor-primaria);
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.ofertas img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  /* altura fixa: todas iguais */
+  object-fit: cover;
+  /* recorta o excesso sem distorcer */
+  border-radius: var(--raio-borda);
+}
+
+.ofertas figcaption {
+  padding: 8px 0;
+  font-size: 1.3rem;
+  font-weight: var(--peso-destaque);
+  color: var(--cor-primaria);
+}
+
+.ofertas p {
+  text-align: left;
+  line-height: 1.6;
+  font-size: 1.3rem;
+}
+
+/* ==========================================================
+   CARDS DE PASSEIOS — seção de 3 colunas
+   ========================================================== */
+.passeio-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--espaco-gap);
+}
+
+.card {
+  background-color: #eef6ee;
+  border: 1px solid var(--cor-destaque1);
+  border-radius: var(--raio-borda);
+  padding: 1rem;
+  text-align: center;
+}
+
+.card h3 {
+  font-family: var(--fonte-titulo);
+  color: var(--cor-primaria);
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.card img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: var(--raio-borda);
+}
+
+.card figcaption {
+  padding: 8px 0;
+  font-size: 1.3rem;
+  font-weight: var(--peso-destaque);
+  color: var(--cor-primaria);
+}
+
+.card p {
+  text-align: left;
+  line-height: 1.6;
+  font-size: 1.3rem;
+}
+
+/* ==========================================================
+   BOTÃO CTA "Passeios"
+   ========================================================== */
+.cta {
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+}
+
+.cta h2 {
+  margin-bottom: 20px;
+}
+
+.cta p {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+
+.passeio {
+  display: inline-block;
+  background-color: var(--cor-primaria);
+  color: var(--cor-texto-claro);
+  text-decoration: none;
+  font-weight: var(--peso-destaque);
+  padding: 12px 32px;
+  border-radius: var(--raio-borda);
+  transition: filter 0.3s ease;
+}
+
+.passeio:hover {
+  filter: brightness(0.85);
+}
+
+/* ===== Página Passeios ===== */
+
+/* Banner de destaque no topo */
+.banner-passeios {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: var(--cor-primaria, #1a5276);
+  color: #fff;
+  border-radius: var(--raio-borda);
+
+}
+
+.botao-cta {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.9rem 2rem;
+  background-color: var(--cor-destaque, #e67e22);
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+.botao-cta:hover {
+  background-color: var(--cor-destaque-hover, #d35400);
+}
+
+/* Grade de cartões: 2 colunas em vez de fluxo simples */
+.grade-passeios {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.grade-passeios h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.cartao-passeio {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+/* Inverte a ordem foto/texto no cartão do meio (efeito zigue-zague) */
+.cartao-passeio.invertido img {
+  order: 2;
+}
+
+.cartao-passeio img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Tabela */
+.secao-tabela {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+  overflow-x: auto;
+
+}
+
+.secao-tabela table {
+  width: 100%;
+  border-collapse: collapse;
+
+}
+
+.secao-tabela th,
+.secao-tabela td {
+  border: 1px solid #ccc;
+  padding: 0.8rem;
+  text-align: center;
+  border-radius: var(--raio-borda);
+}
+
+.secao-tabela th {
+  background-color: var(--cor-primaria, #1a5276);
+  color: #fff;
+
+}
+
+.secao-tabela tr:nth-child(even) {
+  background-color: #f2f6f9;
+
+}
+
+/* Chamada final */
+.chamada-final {
+  text-align: center;
+  padding: 3rem 2rem;
+  background-color: #f2f6f9;
+}
+
+/* Em telas pequenas, volta para coluna única */
+@media (max-width: 700px) {
+  .cartao-passeio {
+    grid-template-columns: 1fr;
+  }
+
+  .cartao-passeio.invertido img {
+    order: 0;
+  }
 }
